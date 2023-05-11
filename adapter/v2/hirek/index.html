@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Adapter News</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				max-width: 1024px;
+			}
+			
+			.header1 {
+				height: 50px;
+				display: flex;
+				flex-wrap: wrap;
+				overflow: hidden;
+				justify-content: space-between;
+				background-image: url("adapterNheaderbg.png");
+				padding-bottom: 0px;
+			}			
+			.header2 {
+				height: 5px;
+				background-color: #88c4fe;
+				border-left: 10px solid #017cf2; 
+				padding: 0px;
+				float: left;
+				width: 100%;
+			}
+			
+			.left {
+				background-color: #88c4fe;
+				border-left: 10px solid #017cf2;
+				padding: 20px;
+				float: left;
+				width: 20%;
+			}
+			.main {
+				padding: 0px;
+				float: left;
+				width: 80%;
+			}
+			@media screen and (max-width: 600px) {
+				.left, .main {
+					width: 100%;
+				}
+			}
+			
+			.frontpageBox {
+				display:flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				padding: 10px;
+				border-bottom: 1px dotted black;
+			}
+			.frontpageArticle > img {
+				float: left;
+				max-width: 40%;
+				padding: 1px;
+				margin: 5px;
+				border: 1px solid black;
+			}
+			.frontpageArticle > p {
+				overflow: hidden;
+				padding-left: 5px;
+				margin-top: 6px;
+			}
+			.frontpageSingle > div {
+				flex-basis: 700px;
+			}
+			.frontpageDouble > div {
+				flex-basis: 350px;
+				max-width: 350px;
+			}
+		
+		</style>
+    </head>
+    <body>
+		
+		<div class="header1">
+			<img src="adapterNheaderimg.png">
+			<div style="width:242px;height:50px;position:relative;display:flex;justify-content:center;white-space: nowrap;"><div style="margin:0;position:absolute;top:50%;">2090. 05. 06., szombat</div></div>
+			<div style="width:242px;height:50px;position:relative;display:flex;justify-content:right;padding-right:5px;"><div style="margin:0;position:absolute;top:50%;">18 °C</div></div>
+		</div>
+		<div class="header2">
+			<!-- <p>Lorem header2 Ipsum</p> -->
+		</div>
+		
+		<div class="left">
+			<p>Lorem left Ipsum</p>
+		</div>
+		<div class="main">
+			<!-- <p>Lorem main Ipsum</p> -->
+	
+			<div class="frontpageBox frontpageSingle">
+				<div class="frontpageArticle">
+					<img src="412felujitott.jpg">
+					<p>Véglegesítette hétfőn a városüzemeltetési bizottság a BKV 2006-os paraméterkönyvét, amely többek között a járatszámokat és sűrűségeket határozza meg - írja a Népszabadság. A BKV, valamint a Városi és Elővárosi Közlekedési Egyesület (VEKE) is támogatta azt a többhetes egyeztetés után megszületett változatot, amely végül nem tartalmazza a korábban bírált járatritkításokat.</p>
+				</div>
+			</div>
+			
+			<div class="frontpageBox frontpageDouble">
+				<div class="frontpageArticle">
+					<img src="412felujitott.jpg">
+					<p>Így idén is a 2005-ös menetidővel közlekedik a 68-as, 28-as és a 37-es villamos, valamint a 77-es autóbusz. Vagyis a civilek szorgalmazására a közlekedési vállalat elállt az idénre tervezett kedvezőtlen változtatásról.</p>
+				</div>
+				<div class="frontpageArticle">
+					<img src="412felujitott.jpg">
+					<p>A bizottság foglalkozott a BKV-járatokat általánosan jellemző zsúfoltság problémájával is. Felkérték Vajda Pál (MSZP) városüzemeltetésért felelős főpolgármester-helyettest, hogy április végére készítsen zsúfoltságkezelési tervet a 90 százalék feletti terheléssel közlekedő járatokra. A tervezetnek meg kell határoznia az esetleg szükséges járatsűrítéseket, vagy a járműszám növelését.</p>
+				</div>
+			</div>
+		</div>
+	
+
+    </body>
+</html>
