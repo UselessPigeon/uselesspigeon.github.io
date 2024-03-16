@@ -76,13 +76,16 @@
 			}
 		
 		</style>
+		
     </head>
     <body>
 		
 		<div class="header1">
 			<img src="adapterNheaderimg.png">
-			<div style="width:242px;height:50px;position:relative;display:flex;justify-content:center;white-space: nowrap;"><div style="margin:0;position:absolute;top:50%;">2090. 05. 06., szombat</div></div>
-			<div style="width:242px;height:50px;position:relative;display:flex;justify-content:right;padding-right:5px;"><div style="margin:0;position:absolute;top:50%;">18 °C</div></div>
+			<div style="width:242px;height:50px;position:relative;display:flex;justify-content:center;white-space: nowrap;"><div id="datum" style="margin:0;position:absolute;top:50%;">2090. 05. 06., szombat</div></div>
+			<div style="width:242px;height:50px;position:relative;display:flex;justify-content:right;padding-right:5px;"><div style="margin:0;position:absolute;top:31%;">
+			<!-- weather widget start --><a target="_blank" href="https://www.booked.hu/weather/budapest-18069"><img src="https://w.bookcdn.com/weather/picture/13_18069_1_14_fff5d9_158_fff5d9_333333_08488D_2_fff5d9_333333_1_6.png?scode=56321&domid=&anc_id=87152"  alt="booked.net"/></a><!-- weather widget end -->
+			</div></div>
 		</div>
 		<div class="header2">
 			<!-- <p>Lorem header2 Ipsum</p> -->
@@ -115,4 +118,16 @@
 	
 
     </body>
+	<script>
+
+		document.getElementById("datum").innerHTML = aktDatum();
+		function aktDatum() {
+		var d = new Date(),
+			minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+			months = ['január','február','március','április','május','június','július','augusztus','szeptember','október','november','december'],
+			days = ['vasárnap','hétfő','kedd','szerda','csütörtök','péntek','szombat'];
+		return d.getFullYear()+'. '+months[d.getMonth()]+' '+d.getDate()+'., '+days[d.getDay()]
+		}
+		
+	</script>
 </html>
